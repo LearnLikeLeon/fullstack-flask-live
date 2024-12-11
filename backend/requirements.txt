@@ -1,0 +1,15 @@
+# Flask is a Python Framework
+
+#Psycopg is the most popular PostgreSQL database adapter for the Python programming language. 
+# Link : https://pypi.org/project/psycopg2-binary/
+
+# Flask-SQLAlchemy is an extension for Flask that adds support for SQLAlchemy to your application. 
+# Link : https://pypi.org/project/Flask-SQLAlchemy/
+
+# Flask-cors : A Flask extension for handling Cross Origin Resource Sharing (CORS), making cross-origin AJAX possible.
+# Link : https://pypi.org/project/Flask-Cors/
+
+flask
+psycopg2-binary
+Flask-SQLAlchemy
+Flask-CORS

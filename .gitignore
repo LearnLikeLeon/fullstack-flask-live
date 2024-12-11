@@ -1,0 +1,7 @@
+*node_modules
+
+# My python virtual environment directory :
+venv
+
+# Notes and configurations directory :
+notes

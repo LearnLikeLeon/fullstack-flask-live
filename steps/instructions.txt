@@ -1,0 +1,98 @@
+--> Youtube : https://www.youtube.com/watch?v=njNXTM6L0wc
+
+    -> GitHub : https://github.com/FrancescoXX/fullstack-flask-app
+
+    -> Tech Stack :
+
+        - FrontEnd : NextJs, TypeScript and Tailwind CSS
+        - BackEnd : Flask which is a Python Framework.
+        - database : PostgreSQL
+        - Docker and Docker Compose are used to Build, share and run the application. They package software 
+        into standardized units for development, shipment and deployment.
+
+Notes : 
+
+    1- A container is a standard unit of software that packages up code and all its dependencies so the application 
+    runs quickly and reliably from one computing environment to another. 
+
+    2- A Docker container image is a lightweight, standalone, executable package of software that includes everything
+     needed to run an application: code, runtime, system tools, system libraries and settings.
+
+    3- Container images become containers at runtime and in the case of Docker containers : images become containers 
+    when they run on Docker Engine. Available for both Linux and Windows-based applications, containerized software 
+    will always run the same, regardless of the infrastructure. Containers isolate software from its environment and
+     ensure that it works uniformly despite differences for instance between development and staging.
+
+    Docker_Documentation : https://www.docker.com/resources/what-container
+
+    Docker_Manuals : https://docs.docker.com/manuals/
+
+    Docker Compose_ Manuals : https://docs.docker.com/compose/
+
+
+
+-> Flask is a Python Framework :
+
+    #Psycopg is the most popular PostgreSQL database adapter for the Python programming language. 
+    # Link : https://pypi.org/project/psycopg2-binary/
+
+    # Flask-SQLAlchemy is an extension for Flask that adds support for SQLAlchemy to your application. 
+    # Link : https://pypi.org/project/Flask-SQLAlchemy/
+
+    # Flask-cors : A Flask extension for handling Cross Origin Resource Sharing (CORS), making cross-origin AJAX possible.
+    # Link : https://pypi.org/project/Flask-Cors/
+
+
+
+-> Create ".gitignore" and " compose.yml " files :
+
+    $ touch .gitignore compose.yml
+
+-> Create a "backend" folder and create these files inside  :
+
+    $ touch requirements.txt app.py flask.dockerfile
+
+--> To create the frontend of this application at the root level of our project under 'project_name' folder :
+
+    -> Because we've got a '.gitignore ' file at the root level of our project :
+
+        $ npx create-next-app@latest --no-git
+
+        -> We give a project name " frontend "
+
+        -> Give the following details : 
+
+            - TypeScript : Yes ; ESLint : Yes ; Tailwind CSS : Yes ; `src` : Yes ; App Router :  No ;Turbopack : Yes; import alias : No
+
+        $ cd frontend
+
+        -> Install ' axios ' dependencies or package to make HTTP requests : $ npm i axios
+
+        -> Run your frontend application : $ npm run dev
+
+        -> Implement the frontend code and Dockerize your frontent application under the "frontend" folder :
+
+            $ touch .dockerignore next.dockerfile
+
+        -> Modify your 'next.config.js' file by adding :
+
+            output: `standalone`
+
+        -> Build the docker compose of your nextjs application :
+
+            $ docker compose build
+
+            -> To run the nextjs application inside our docker container : 
+                
+                $ docker compose up -d nextapp
+
+Finally to verify that all our created services are running on localhost using docker containers :
+
+    $ docker ps -a 
+
+    NB : Please refresh your browser and you'll see your containerized application running on localhost.
+
+
+
+
+
